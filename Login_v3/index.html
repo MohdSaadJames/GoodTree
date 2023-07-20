@@ -34,7 +34,7 @@
     <div class="limiter">
         <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
             <div class="wrap-login100">
-                <form class="login100-form validate-form" onsubmit="return loginUser()">
+                <form class="login100-form validate-form" id="login-form">
                     <span class="login100-form-logo">
                         <i class="zmdi zmdi-landscape"></i>
                     </span>
@@ -61,7 +61,7 @@
                     </div>
 
                     <div class="container-login100-form-btn">
-                        <button class="login100-form-btn">
+                        <button type="submit" class="login100-form-btn">
                             Login
                         </button>
                     </div>
@@ -97,24 +97,30 @@
     <script src="js/main.js"></script>
 
     <script>
-        function loginUser() {
-            // Get the username and password from the input fields
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
+        document.addEventListener('DOMContentLoaded', function () {
+            var loginForm = document.getElementById('login-form');
+            loginForm.addEventListener('submit', loginUser);
 
-            // Implement your login validation logic here
-            // For simplicity, let's assume the following login credentials are valid
-            var validUsername = "john_doe";
-            var validPassword = "123456";
+            function loginUser(event) {
+                event.preventDefault();
 
-            if (username === validUsername && password === validPassword) {
-                alert("Login successful!");
-                return true; // Allow the form submission
-            } else {
-                alert("Invalid username or password. Please try again.");
-                return false; // Prevent the form submission
+                // Get the username and password from the input fields
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+
+                // Implement your login validation logic here
+                // For simplicity, let's assume the following login credentials are valid
+                var validUsername = "john_doe";
+                var validPassword = "123456";
+
+                if (username === validUsername && password === validPassword) {
+                    alert("Login successful!");
+                    // You can redirect to another page here using window.location or perform any other actions
+                } else {
+                    alert("Invalid username or password. Please try again.");
+                }
             }
-        }
+        });
     </script>
 
 </body>
