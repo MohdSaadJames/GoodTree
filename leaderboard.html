@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaderboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .leaderboard-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .leaderboard-header {
+            background-color: #47a4f5;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            font-size: 24px;
+        }
+        .leaderboard-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .leaderboard-table th,
+        .leaderboard-table td {
+            padding: 12px 20px;
+            text-align: left;
+        }
+        .leaderboard-table th {
+            background-color: #47a4f5;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .leaderboard-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .leaderboard-table tr:hover {
+            background-color: #e5e5e5;
+        }
+        .rank {
+            font-size: 18px;
+            font-weight: bold;
+            color: #47a4f5;
+        }
+        .player-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .score {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="leaderboard-container">
+        <div class="leaderboard-header">
+            Leaderboard
+        </div>
+        <table class="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Player Name</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="rank">1</td>
+                    <td class="player-name">Vaibhav Singh</td>
+                    <td class="score">1000</td>
+                </tr>
+                <tr>
+                    <td class="rank">2</td>
+                    <td class="player-name">Zaibhav Singh</td>
+                    <td class="score">950</td>
+                </tr>
+                <tr>
+                    <td class="rank">3</td>
+                    <td class="player-name">Aibhav Singh</td>
+                    <td class="score">800</td>
+                </tr>
+                <!-- Add more rows for additional players -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
